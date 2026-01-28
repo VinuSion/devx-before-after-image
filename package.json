@@ -11,12 +11,11 @@
   "dependencies": {
     "cloudinary": "^2.9.0",
     "cross-fetch": "^4.1.0",
-    "formidable": "^3.5.4",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "sharp": "^0.34.5",
-    "streamifier": "^0.1.1"
+    "react-hook-form": "^7.71.1",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
