@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GenerateImageResponse, ErrorImageResponse } from "@/types/generate";
+import { GenerateImageResponse, ErrorImageResponse } from "@/types/image";
 import { getErrorMessage } from "@/lib/utils";
 
 export function useGenerateImage() {

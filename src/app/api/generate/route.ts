@@ -53,20 +53,28 @@ export async function POST(req: Request) {
       .jpeg({ quality: 90 })
       .toBuffer();
 
+    const folder = process.env.CLOUDINARY_FOLDER ?? "devx-assignment";
+    const publicId = `generated/combined-${Date.now()}`;
+
     const uploadResult: UploadApiResponse = await new Promise(
       (resolve, reject) => {
-        cloudinary.uploader
-          .upload_stream(
-            { resource_type: "image" },
-            (error, result) => {
-              if (error || !result) {
-                reject(error ?? new Error("Upload failed"));
-                return;
-              }
-              resolve(result);
+        const stream = cloudinary.uploader.upload_stream(
+          {
+            resource_type: "image",
+            folder,
+            public_id: publicId,
+            overwrite: false,
+          },
+          (error, result) => {
+            if (error || !result) {
+              reject(error ?? new Error("Cloudinary upload failed"));
+              return;
             }
-          )
-          .end(compositeBuffer);
+            resolve(result);
+          }
+        );
+
+        stream.end(compositeBuffer);
       }
     );
 

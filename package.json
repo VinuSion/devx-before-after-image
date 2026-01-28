@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "cloudinary": "^2.9.0",
-    "cross-fetch": "^4.1.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
