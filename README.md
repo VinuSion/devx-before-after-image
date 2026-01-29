@@ -4,6 +4,8 @@ This project implements a simplified employee → customer review request flow w
 
 The implementation intentionally focuses on **core flow, clean React structure, async handling, and realistic scoping**, as requested in the assignment.
 
+### Live demo: https://devx-before-after-image.vercel.app/
+
 ---
 
 ## Tech Stack
