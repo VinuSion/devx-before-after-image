@@ -6,13 +6,13 @@ export function useReviewImage() {
   const rawUrl = params.get("url");
 
   if (!rawUrl) {
-    return { imageUrl: null, downloadUrl: null, placeReviewUrl: null };
+    return { imageUrl: null, downloadUrl: null };
   }
 
   const decodedUrl = decodeURIComponent(rawUrl);
 
   if (!isValidCloudinaryUrl(decodedUrl)) {
-    return { imageUrl: null, downloadUrl: null, placeReviewUrl: null };
+    return { imageUrl: null, downloadUrl: null };
   }
 
   const fileName = "before-after-review";
@@ -22,14 +22,8 @@ export function useReviewImage() {
     `/upload/fl_attachment:${fileName}/`
   );
 
-  const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID;
-  const placeReviewUrl = placeId
-    ? `https://search.google.com/local/writereview?placeid=${placeId}`
-    : null;
-
   return {
     imageUrl: decodedUrl,
     downloadUrl,
-    placeReviewUrl,
   };
 }

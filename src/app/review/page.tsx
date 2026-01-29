@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useReviewImage } from "@/hooks/useReviewImage";
 
 export default function ReviewPage() {
-  const { imageUrl, downloadUrl, placeReviewUrl } = useReviewImage();
+  const { imageUrl, downloadUrl } = useReviewImage();
 
   if (!imageUrl || !downloadUrl) {
     return (
@@ -46,16 +46,6 @@ export default function ReviewPage() {
           >
             Download Image
           </a>
-
-          {placeReviewUrl && (
-            <a
-              href={placeReviewUrl}
-              target="_blank"
-              className="block w-full border border-gray-300 hover:bg-gray-100 text-black font-medium py-3 rounded-lg transition"
-            >
-              Leave a Google Review
-            </a>
-          )}
         </div>
       </div>
     </main>
