@@ -161,7 +161,7 @@ Open: http://localhost:3000
 
 ---
 
-## 🔮 What I would improve with more time
+## What I would improve with more time
 
 - Drag & drop uploads
 - Client-side image previews before upload
