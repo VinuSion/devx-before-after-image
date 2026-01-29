@@ -141,14 +141,12 @@ These are unnecessary for demonstrating the core flow.
 npm install
 ```
 
-### 2. Create `.env.local`
+### 2. Create `.env` file (You can copy the variable names from `.env.example`)
 
 ```
 CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
-
-NEXT_PUBLIC_GOOGLE_PLACE_ID=
 ```
 
 ### 3. Start the app
